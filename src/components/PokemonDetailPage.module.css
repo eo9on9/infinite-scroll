@@ -1,0 +1,21 @@
+.page {
+  width: 400px;
+  margin: 0 auto;
+  padding: 120px 24px;
+}
+
+/* .page .title {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  margin-bottom: 24px;
+} */
+
+/* .page h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+} */

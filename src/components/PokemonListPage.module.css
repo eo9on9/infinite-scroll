@@ -1,0 +1,11 @@
+.page {
+  width: 480px;
+  margin: 0 auto;
+  padding: 120px 24px;
+}
+
+.page h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
