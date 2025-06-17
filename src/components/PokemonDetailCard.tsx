@@ -1,30 +1,30 @@
 import Image from 'next/image'
 
-import { useCallback, useEffect, useState } from 'react'
 import { getPokemon } from '../apis/getPokemon'
-import { Pokemon } from '../models/Pokemon'
 import styles from './PokemonDetailCard.module.css'
 
 interface Props {
   order: number
 }
 
-export const PokemonDetailCard = ({ order }: Props) => {
-  const [pokemon, setPokemon] = useState<Pokemon>()
+export const PokemonDetailCard = async ({ order }: Props) => {
+  // const [pokemon, setPokemon] = useState<Pokemon>()
 
-  const fetchPokemon = useCallback(async () => {
-    try {
-      const data = await getPokemon({ order })
+  // const fetchPokemon = useCallback(async () => {
+  //   try {
+  //     const data = await getPokemon({ order })
 
-      setPokemon(data)
-    } catch (e) {
-      console.error(e)
-    }
-  }, [order])
+  //     setPokemon(data)
+  //   } catch (e) {
+  //     console.error(e)
+  //   }
+  // }, [order])
 
-  useEffect(() => {
-    fetchPokemon()
-  }, [fetchPokemon])
+  // useEffect(() => {
+  //   fetchPokemon()
+  // }, [fetchPokemon])
+
+  const pokemon = await getPokemon({ order })
 
   return (
     <div className={styles.card}>

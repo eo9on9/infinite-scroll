@@ -1,5 +1,3 @@
-'use client'
-
 import { PokemonDetailCard } from './PokemonDetailCard'
 
 import styles from './PokemonDetailPage.module.css'
@@ -10,10 +8,10 @@ interface Props {
   }
 }
 
-export const PokemonDetailPage = ({ params }: Props) => {
+export const PokemonDetailPage = async ({ params }: Props) => {
   return (
     <div className={styles.page}>
-      <PokemonDetailCard order={Number.parseInt(params.id)} />
+      {await PokemonDetailCard({ order: Number.parseInt(params.id) })}
     </div>
   )
 }
