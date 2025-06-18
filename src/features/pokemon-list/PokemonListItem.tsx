@@ -1,5 +1,5 @@
 import { useRouter } from 'next/navigation'
-import { PokemonSummary } from '../models/PokemonSummary'
+import { PokemonSummary } from '../../entities/pokemon/model/PokemonSummary'
 import styles from './PokemonListItem.module.css'
 
 interface PokemonListItemProps extends PokemonSummary {

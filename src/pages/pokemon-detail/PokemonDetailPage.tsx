@@ -1,4 +1,4 @@
-import { PokemonDetailCard } from './PokemonDetailCard'
+import { PokemonDetailCard } from '../../widgets/pokemon-detail/PokemonDetailCard'
 
 import styles from './PokemonDetailPage.module.css'
 

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { getPokemon } from '../apis/getPokemon'
+import { getPokemon } from '@/src/entities/pokemon/api/getPokemon'
 import styles from './PokemonDetailCard.module.css'
 
 interface Props {

@@ -1,15 +1,15 @@
+import { getPokemonList } from '@/src/entities/pokemon/api/getPokemonList'
+import { Generation } from '@/src/shared/types'
+import { IntersectionDetector } from '@/src/shared/ui/IntersectionDetector'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { getPokemonList } from '../apis/getPokemonList'
-import { GEN_RANGE } from '../constants'
-import { usePreviousPath } from '../hooks/usePreviousPath'
-import { PokemonSummary } from '../models/PokemonSummary'
-import { Gen } from '../types'
-import { IntersectionDetector } from './IntersectionDetector'
+import { PokemonSummary } from '../../entities/pokemon/model/PokemonSummary'
+import { PokemonListItem } from '../../features/pokemon-list/PokemonListItem'
+import { GENERATION_ORDER_RANGE } from '../../shared/constants'
+import { usePreviousPath } from '../../shared/hooks/usePreviousPath'
 import styles from './PokemonList.module.css'
-import { PokemonListItem } from './PokemonListItem'
 
 interface PokemonListProps {
-  gen: Gen
+  gen: Generation
 }
 
 const STEP = 20
@@ -26,7 +26,7 @@ export const PokemonList = ({ gen }: PokemonListProps) => {
 
   const page = useRef(0)
 
-  const [startIndex, endIndex] = GEN_RANGE[gen]
+  const [startIndex, endIndex] = GENERATION_ORDER_RANGE[gen].map(v => v - 1)
 
   const fetchPokemonList = useCallback(async () => {
     try {

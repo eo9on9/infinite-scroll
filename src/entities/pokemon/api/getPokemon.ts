@@ -1,5 +1,5 @@
-import { Pokemon } from '../models/Pokemon'
-import { pokemonApi } from './helper'
+import { pokemonApi } from '@/src/shared/api/helper'
+import { Pokemon } from '../model/Pokemon'
 
 interface GetPokemonParams {
   order: number

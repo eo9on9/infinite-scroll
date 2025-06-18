@@ -1,8 +1,8 @@
 'use client'
 
-import { Gen } from '@/src/types'
-import { usePreviousPath } from '../hooks/usePreviousPath'
-import { PokemonList } from './PokemonList'
+import { Generation } from '@/src/shared/types'
+import { usePreviousPath } from '../../shared/hooks/usePreviousPath'
+import { PokemonList } from '../../widgets/pokemon-list/PokemonList'
 import styles from './PokemonListPage.module.css'
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
   }
 }
 
-const TITLE_MAP: Record<Gen, string> = {
+const TITLE_MAP: Record<Generation, string> = {
   1: '1st',
   2: '2nd',
   3: '3rd',
@@ -20,7 +20,7 @@ const TITLE_MAP: Record<Gen, string> = {
 }
 
 export const PokemonListPage = ({ params }: Props) => {
-  const gen = Number(params.gen) as Gen
+  const gen = Number(params.gen) as Generation
 
   const previousPath = usePreviousPath()
 
