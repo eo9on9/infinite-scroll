@@ -40,6 +40,7 @@ export const PokemonDetailCard = async ({ order }: Props) => {
               width={160}
               height={160}
               alt={pokemon.name}
+              priority
             />
           </div>
           <div className={styles.info}>

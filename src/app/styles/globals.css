@@ -1,5 +1,4 @@
-@import './normalize.css';
-@import './reset.css';
+@import 'tailwindcss';
 
 @font-face {
   font-family: 'Pretendard Variable';
@@ -9,16 +8,7 @@
   src: url('/assets/fonts/PretendardVariable.woff2') format('woff2-variations');
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  min-width: 100%;
-  min-height: 100%;
-  background: #fef7db url('/assets/images/bg.jpg') center / cover no-repeat;
-  background-attachment: fixed;
-
-  font-family: 'Pretendard Variable', Arial, Helvetica, sans-serif;
-  color: #303030;
+@theme {
+  --font-pretendard: 'Pretendard Variable', Arial, Helvetica, sans-serif;
+  --default-font-family: var(--font-pretendard);
 }

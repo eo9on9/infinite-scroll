@@ -2,13 +2,12 @@
 
 import { Generation } from '@/src/shared/types'
 import { PokemonList } from '@/src/widgets/pokemon-list/ui/PokemonList'
+import { use } from 'react'
 import { usePreviousPath } from '../../../shared/hooks/usePreviousPath'
 import styles from './PokemonListPage.module.css'
 
 interface Props {
-  params: {
-    gen: string
-  }
+  params: Promise<{ gen: string }>
 }
 
 const TITLE_MAP: Record<Generation, string> = {
@@ -20,7 +19,9 @@ const TITLE_MAP: Record<Generation, string> = {
 }
 
 export const PokemonListPage = ({ params }: Props) => {
-  const gen = Number(params.gen) as Generation
+  const { gen: _gen } = use(params)
+
+  const gen = Number(_gen) as Generation
 
   const previousPath = usePreviousPath()
 
