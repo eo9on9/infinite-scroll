@@ -1,11 +1,11 @@
 import { getPokemonList } from '@/src/entities/pokemon/api/getPokemonList'
+import { PokemonSummary } from '@/src/entities/pokemon/model/PokemonSummary'
+import { PokemonListItem } from '@/src/features/pokemon-list/ui/PokemonListItem'
+import { GENERATION_ORDER_RANGE } from '@/src/shared/constants'
+import { usePreviousPath } from '@/src/shared/hooks/usePreviousPath'
 import { Generation } from '@/src/shared/types'
 import { IntersectionDetector } from '@/src/shared/ui/IntersectionDetector'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { PokemonSummary } from '../../entities/pokemon/model/PokemonSummary'
-import { PokemonListItem } from '../../features/pokemon-list/PokemonListItem'
-import { GENERATION_ORDER_RANGE } from '../../shared/constants'
-import { usePreviousPath } from '../../shared/hooks/usePreviousPath'
 import styles from './PokemonList.module.css'
 
 interface PokemonListProps {

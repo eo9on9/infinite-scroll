@@ -1,3 +1,3 @@
-import { PokemonListPage } from '@/src/pages/pokemon-list/PokemonListPage'
+import { PokemonListPage } from '@/src/pages/pokemon-list/ui/PokemonListPage'
 
 export default PokemonListPage

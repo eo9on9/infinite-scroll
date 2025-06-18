@@ -1,8 +1,8 @@
 'use client'
 
 import { Generation } from '@/src/shared/types'
-import { usePreviousPath } from '../../shared/hooks/usePreviousPath'
-import { PokemonList } from '../../widgets/pokemon-list/PokemonList'
+import { PokemonList } from '@/src/widgets/pokemon-list/ui/PokemonList'
+import { usePreviousPath } from '../../../shared/hooks/usePreviousPath'
 import styles from './PokemonListPage.module.css'
 
 interface Props {
