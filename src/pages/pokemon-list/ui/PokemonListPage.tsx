@@ -1,5 +1,3 @@
-'use client'
-
 import { Generation, GENERATION } from '@/src/shared/constants'
 import { PokemonList } from '@/src/widgets/pokemon-list/ui/PokemonList'
 import { notFound } from 'next/navigation'

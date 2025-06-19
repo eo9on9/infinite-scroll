@@ -1,3 +1,5 @@
+'use client'
+
 import { getPokemonList } from '@/src/entities/pokemon/api/getPokemonList'
 import { PokemonSummary } from '@/src/entities/pokemon/model/PokemonSummary'
 import { PokemonListItem } from '@/src/features/pokemon-list/ui/PokemonListItem'
