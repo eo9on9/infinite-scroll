@@ -6,7 +6,10 @@ interface PokemonListItemProps extends PokemonSummary {
   index: number
 }
 
-export const PokemonListItem = ({ index: _index, name: _name }: PokemonListItemProps) => {
+export const PokemonListItem = ({
+  index: _index,
+  name: _name,
+}: PokemonListItemProps) => {
   const router = useRouter()
 
   const index = `#${_index.toString().padStart(3, '0')}`

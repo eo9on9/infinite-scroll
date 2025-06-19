@@ -1,11 +1,19 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { createContext, PropsWithChildren, useContext, useEffect, useRef } from 'react'
+import {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useEffect,
+  useRef,
+} from 'react'
 
 const PreviousPathContext = createContext<string | null>(null)
 
-export const PreviousPathContextProvider = ({ children }: PropsWithChildren) => {
+export const PreviousPathContextProvider = ({
+  children,
+}: PropsWithChildren) => {
   const pathname = usePathname()
 
   const previousPath = useRef<string | null>(null)

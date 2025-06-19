@@ -1,9 +1,8 @@
 import { getPokemonList } from '@/src/entities/pokemon/api/getPokemonList'
 import { PokemonSummary } from '@/src/entities/pokemon/model/PokemonSummary'
 import { PokemonListItem } from '@/src/features/pokemon-list/ui/PokemonListItem'
-import { GENERATION_ORDER_RANGE } from '@/src/shared/constants'
+import { Generation, GENERATION_ORDER_RANGE } from '@/src/shared/constants'
 import { usePreviousPath } from '@/src/shared/hooks/usePreviousPath'
-import { Generation } from '@/src/shared/types'
 import { IntersectionDetector } from '@/src/shared/ui/IntersectionDetector'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import styles from './PokemonList.module.css'
@@ -18,8 +17,9 @@ export const PokemonList = ({ gen }: PokemonListProps) => {
   const previousPath = usePreviousPath()
 
   const [list, setList] = useState<PokemonSummary[]>(
-    previousPath?.includes('/detail') ? JSON.parse(sessionStorage.getItem('abc') ?? '[]') : [],
-    // [],
+    previousPath?.includes('/detail')
+      ? JSON.parse(sessionStorage.getItem('abc') ?? '[]')
+      : [],
   )
 
   const isLoading = useRef(false)

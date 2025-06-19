@@ -1,9 +1,9 @@
 'use client'
 
-import { Generation } from '@/src/shared/types'
+import { Generation, GENERATION } from '@/src/shared/constants'
 import { PokemonList } from '@/src/widgets/pokemon-list/ui/PokemonList'
+import { notFound } from 'next/navigation'
 import { use } from 'react'
-import { usePreviousPath } from '../../../shared/hooks/usePreviousPath'
 import styles from './PokemonListPage.module.css'
 
 interface Props {
@@ -23,9 +23,7 @@ export const PokemonListPage = ({ params }: Props) => {
 
   const gen = Number(_gen) as Generation
 
-  const previousPath = usePreviousPath()
-
-  console.log(previousPath)
+  if (!GENERATION.includes(gen)) notFound()
 
   return (
     <div className={styles.page}>
