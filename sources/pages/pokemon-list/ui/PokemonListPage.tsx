@@ -1,5 +1,5 @@
-import { Generation, GENERATION } from '@/src/shared/constants'
-import { PokemonList } from '@/src/widgets/pokemon-list/ui/PokemonList'
+import { Generation, GENERATION } from '@/sources/shared/constants'
+import { PokemonList } from '@/sources/widgets/pokemon-list/ui/PokemonList'
 import { notFound } from 'next/navigation'
 import { use } from 'react'
 import styles from './PokemonListPage.module.css'

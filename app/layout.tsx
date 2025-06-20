@@ -1,4 +1,4 @@
-import { RootLayout } from '@/src/app/ui/RootLayout'
+import { RootLayout } from '@/sources/app/ui/RootLayout'
 
 export const metadata = {
   title: 'Pokédex',

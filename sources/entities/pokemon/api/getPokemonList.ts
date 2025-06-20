@@ -1,5 +1,5 @@
-import { pokemonApi } from '@/src/shared/api/helper'
-import { PokemonSummary } from '../model/PokemonSummary'
+import { pokemonApi } from '@/sources/shared/api/helper'
+import { PokemonSummary } from '../model/types/PokemonSummary'
 
 interface GetPokemonListParams {
   offset: number

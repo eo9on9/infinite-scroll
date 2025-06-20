@@ -1,5 +1,5 @@
-import '@/src/app/styles/globals.css'
-import { PreviousPathContextProvider } from '@/src/shared/hooks/usePreviousPath'
+import { PreviousPathContextProvider } from '@/sources/shared/contexts/usePreviousPath'
+import '@/sources/shared/lib/styles/globals.css'
 import { PropsWithChildren } from 'react'
 
 export const RootLayout = ({ children }: PropsWithChildren) => {

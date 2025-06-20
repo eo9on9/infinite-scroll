@@ -1,4 +1,4 @@
-import { PokemonSummary } from '@/src/entities/pokemon/model/PokemonSummary'
+import { PokemonSummary } from '@/sources/entities/pokemon/model/types/PokemonSummary'
 import { useRouter } from 'next/navigation'
 import styles from './PokemonListItem.module.css'
 

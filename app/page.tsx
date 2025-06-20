@@ -1,3 +1,3 @@
-import { HomePage } from '@/src/pages/home/ui/HomePage'
+import { HomePage } from '@/sources/pages/home/ui/HomePage'
 
 export default HomePage

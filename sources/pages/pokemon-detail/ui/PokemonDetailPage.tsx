@@ -1,5 +1,5 @@
-import { GENERATION_ORDER_RANGE } from '@/src/shared/constants'
-import { PokemonDetailCard } from '@/src/widgets/pokemon-detail/ui/PokemonDetailCard'
+import { GENERATION_ORDER_RANGE } from '@/sources/shared/constants'
+import { PokemonDetailCard } from '@/sources/widgets/pokemon-detail/ui/PokemonDetailCard'
 import { notFound } from 'next/navigation'
 import styles from './PokemonDetailPage.module.css'
 
