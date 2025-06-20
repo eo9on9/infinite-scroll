@@ -1,4 +1,5 @@
-@import 'tailwindcss';
+@import './normalize.css';
+@import './reset.css';
 
 @font-face {
   font-family: 'Pretendard Variable';
@@ -8,7 +9,11 @@
   src: url('/assets/fonts/PretendardVariable.woff2') format('woff2-variations');
 }
 
-@theme {
-  --font-pretendard: 'Pretendard Variable', Arial, Helvetica, sans-serif;
-  --default-font-family: var(--font-pretendard);
+* {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
 }

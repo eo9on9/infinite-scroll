@@ -1,0 +1,12 @@
+.html {
+  min-width: 100%;
+  min-height: 100%;
+  font-family: 'Pretendard Variable', Arial, Helvetica, sans-serif;
+  color: #303030;
+  background: #fef7db url('/assets/images/bg.jpg') center / cover no-repeat
+    fixed;
+}
+
+.body {
+  line-height: 1.5;
+}

@@ -9,14 +9,14 @@ import {
   useRef,
 } from 'react'
 
-const PreviousPathContext = createContext<string | null>(null)
+const PreviousPathContext = createContext<string | undefined>(undefined)
 
 export const PreviousPathContextProvider = ({
   children,
 }: PropsWithChildren) => {
   const pathname = usePathname()
 
-  const previousPath = useRef<string | null>(null)
+  const previousPath = useRef<string>('')
 
   useEffect(() => {
     previousPath.current = pathname
@@ -31,6 +31,11 @@ export const PreviousPathContextProvider = ({
 
 export const usePreviousPath = () => {
   const context = useContext(PreviousPathContext)
+
+  if (context === undefined)
+    throw new Error(
+      'usePreviousPath must be used within a PreviousPathContextProvider',
+    )
 
   return context
 }
