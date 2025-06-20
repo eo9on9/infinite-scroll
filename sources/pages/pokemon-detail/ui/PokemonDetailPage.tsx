@@ -1,5 +1,5 @@
 import { GENERATION_ORDER_RANGE } from '@/sources/shared/constants'
-import { PokemonDetailCard } from '@/sources/widgets/pokemon-detail/ui/PokemonDetailCard'
+import { PokemonCard } from '@/sources/widgets/pokemon-detail/ui/PokemonCard'
 import { notFound } from 'next/navigation'
 import styles from './PokemonDetailPage.module.css'
 
@@ -19,5 +19,5 @@ export const PokemonDetailPage = async ({ params }: Props) => {
 
   if (!isValidOrder(order)) notFound()
 
-  return <div className={styles.page}>{await PokemonDetailCard({ order })}</div>
+  return <div className={styles.page}>{await PokemonCard({ order })}</div>
 }

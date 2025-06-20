@@ -1,0 +1,22 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.wrap dl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.wrap dl dt {
+  font-size: 14px;
+}
+
+.wrap dl dd .types {
+  display: flex;
+  gap: 8px;
+}

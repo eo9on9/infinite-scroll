@@ -20,7 +20,7 @@ export const PokemonList = ({ gen }: PokemonListProps) => {
 
   const [list, setList] = useState<PokemonSummary[]>(
     previousPath?.includes('/detail')
-      ? JSON.parse(sessionStorage.getItem('abc') ?? '[]')
+      ? JSON.parse(sessionStorage.getItem('list') ?? '[]')
       : [],
   )
 
@@ -54,16 +54,16 @@ export const PokemonList = ({ gen }: PokemonListProps) => {
   }, [startIndex, endIndex, list])
 
   useEffect(() => {
-    sessionStorage.setItem('abc', JSON.stringify(list))
+    sessionStorage.setItem('list', JSON.stringify(list))
   }, [list])
 
   return (
     <>
-      <div className={styles.list}>
+      <div className={styles.wrap}>
         {list.map((item, index) => (
           <PokemonListItem
             key={item.name}
-            index={index + startIndex + 1}
+            order={index + startIndex + 1}
             name={item.name}
             url={item.url}
           />

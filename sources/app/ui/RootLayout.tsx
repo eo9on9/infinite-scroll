@@ -8,7 +8,6 @@ export const RootLayout = ({ children }: PropsWithChildren) => {
     <html lang="en" className={styles.html}>
       <body className={styles.body}>
         <PreviousPathContextProvider>{children}</PreviousPathContextProvider>
-        {/* {children} */}
       </body>
     </html>
   )

@@ -17,3 +17,10 @@
 a {
   text-decoration: none;
 }
+
+.glass {
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(16px);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}

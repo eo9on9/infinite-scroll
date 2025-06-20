@@ -1,28 +1,23 @@
 import { PokemonSummary } from '@/sources/entities/pokemon/model/types/PokemonSummary'
+import { toCode, toName } from '@/sources/shared/lib/utils/format'
 import { useRouter } from 'next/navigation'
 import styles from './PokemonListItem.module.css'
 
 interface PokemonListItemProps extends PokemonSummary {
-  index: number
+  order: number
 }
 
-export const PokemonListItem = ({
-  index: _index,
-  name: _name,
-}: PokemonListItemProps) => {
+export const PokemonListItem = ({ order, name }: PokemonListItemProps) => {
   const router = useRouter()
 
-  const index = `#${_index.toString().padStart(3, '0')}`
-  const name = _name.toUpperCase()
-
   const handleClick = () => {
-    router.push(`/detail/${_index}`)
+    router.push(`/detail/${order}`)
   }
 
   return (
-    <div className={styles.item} onClick={handleClick}>
-      <div className={styles.itemIndex}>{index}</div>
-      <div className={styles.itemName}>{name}</div>
+    <div className={`${styles.item} glass`} onClick={handleClick}>
+      <div className={styles.itemCode}>{toCode(order)}</div>
+      <div className={styles.itemName}>{toName(name)}</div>
     </div>
   )
 }
